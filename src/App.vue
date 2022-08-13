@@ -12,11 +12,13 @@ start();
 </script>
 
 <template>
-  <div class="flex flex-wrap w-full h-[100vh] text-zinc-50 pb-10 bg-zinc-900">
+  <div class="h-[100vh] overflow-hidden">
     <Toolbar></Toolbar>
-    <Leftnav></Leftnav>
-    <div class="bg-zinc-800 h-full rounded-tl grow overflow-y-scroll">
-      <RouterView></RouterView>
+    <div class="flex w-full h-full text-zinc-50 pb-10 bg-zinc-900 overflow-hidden">
+      <Leftnav></Leftnav>
+      <div class="bg-zinc-800 h-full rounded-tl basis-auto overflow-y-scroll">
+        <RouterView></RouterView>
+      </div>
     </div>
   </div>
 </template>

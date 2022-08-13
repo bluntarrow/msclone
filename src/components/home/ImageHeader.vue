@@ -6,7 +6,7 @@
 
   <!-- writeup -->
   <div
-    class="h-full w-full absolute pl-8 top-0 bg-gradient-to-b from-black/0 to-zinc-800 grid grid-cols-4 items-center"
+    class="h-full w-full absolute pl-8 top-0 bg-gradient-to-b from-zinc-800/0 to-zinc-800 grid grid-cols-4 items-center"
   >
     <div class="flex flex-col col-span-3 md:col-span-1">
       <div class="">
