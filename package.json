@@ -1,0 +1,25 @@
+{
+  "name": "mslone",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.6.7",
+    "@heroicons/vue": "^1.0.6",
+    "swiper": "^8.3.2",
+    "vue": "^3.2.25",
+    "vue-router": "^4.1.1",
+    "vue3-lazyload": "^0.3.6",
+    "vuex": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.5",
+    "vitawind": "^2.0.0",
+    "vite": "^2.7.2"
+  }
+}
