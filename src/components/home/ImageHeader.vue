@@ -1,7 +1,7 @@
 <template>
   <!--  picture -->
   <div
-    class="bg-[url('./assets/img/landscape/img1.jpg')] md:bg-left bg-cover w-full object-cover aspect-[20/10] md:aspect-[20/8] md:bg-fixed"
+    class="bg-[url('./assets/img/landscape/img1.jpg')] md:bg-left bg-cover w-full object-cover aspect-[20/10] md:aspect-[6/2] md:bg-fixed"
   ></div>
 
   <!-- writeup -->
