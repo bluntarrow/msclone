@@ -3,14 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-
-
     *::-webkit-scrollbar {
         @apply w-1 sm:w-4;
     }
 
     *::-webkit-scrollbar-track {
-        @apply bg-black;
+        @apply bg-zinc-900;
     }
     
     *::-webkit-scrollbar-thumb {

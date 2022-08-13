@@ -5,7 +5,7 @@
       <ImageHeader></ImageHeader>/
     </div>
     <!--apps section -->
-    <div class="p-8 pt-0 -mt-24 w-auto pb-0 z-40 relative">
+    <div class="p-8 pt-0 -mt-24 pb-0 z-40 relative">
       <Slides></Slides>
       <footer class="text-center text-xs md:mt-10 py-2 text-zinc-600">
         &copy;{{ year }} MsStore inc.
