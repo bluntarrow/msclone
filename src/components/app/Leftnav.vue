@@ -11,14 +11,14 @@
     </router-link>
 
     <ul>
-      <router-link to="/">
+      <router-link to="/library">
         <div
           class="flex justify-center items-center w-max p-4 rounded-md hover:bg-zinc-700/50"
         >
           <CollectionIcon class="h-6"></CollectionIcon>
         </div>
       </router-link>
-      <router-link to="/">
+      <router-link to="/help">
         <div
           class="flex justify-center items-center w-max p-4 rounded-md hover:bg-zinc-700/50"
         >
