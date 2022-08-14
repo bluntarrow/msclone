@@ -5,7 +5,7 @@ import {
 const store = createStore({
   state() {
     return {
-      movies: [{
+      slides: [{
           to: "/",
           title: "Stranded"
         },
@@ -45,24 +45,14 @@ const store = createStore({
   getters: {},
   mutations: {
     startup(state) {
-      // movies mutations
-      for (let i = 0; i < state.movies.length; i++) {
+      // slides mutations
+      for (let i = 0; i < state.slides.length; i++) {
         // images
-        state.movies[i].img = new URL(
-          `../assets/img/portrait/img${i + 1}.jpg`,
-          import.meta.url
-        );
-
-        // movies
-        state.movies[i].src = new URL(
-          `../assets/video/${i+1}.mp4`,
+        state.slides[i].img = new URL(
+          `../assets/img/slides/img${i + 1}.jpg`,
           import.meta.url
         );
       }
-    },
-    setIsOpen(state, a) {
-      state.isOpen = a;
-      console.log(a)
     }
   },
 });
