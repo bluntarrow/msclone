@@ -1,13 +1,12 @@
-import {
-  createStore
-} from "vuex";
+import { createStore } from "vuex";
 
 const store = createStore({
   state() {
     return {
-      slides: [{
+      slides: [
+        {
           to: "/",
-          title: "Stranded"
+          title: "Stranded",
         },
         {
           to: "/",
@@ -15,11 +14,11 @@ const store = createStore({
         },
         {
           to: "/",
-          title: "Reboot"
+          title: "Reboot",
         },
         {
           to: "/",
-          title: "Delima"
+          title: "Delima",
         },
         {
           to: "/",
@@ -27,48 +26,49 @@ const store = createStore({
         },
         {
           to: "/",
-          title: "Broken"
+          title: "Broken",
         },
         {
           to: "/",
-          title: "Overwatch"
-        }
+          title: "Overwatch",
+        },
       ],
-      apps: [{
+      apps: [
+        {
           to: "/",
-          title: "Stranded"
+          title: "Tiktok",
         },
         {
           to: "/",
-          title: "Space Cadet",
+          title: "Twitter",
         },
         {
           to: "/",
-          title: "Reboot"
+          title: "Solar City",
         },
         {
           to: "/",
-          title: "Delima"
+          title: "Space-X",
         },
         {
           to: "/",
-          title: "The Butch",
+          title: "Slack",
         },
         {
           to: "/",
-          title: "Broken"
+          title: "Uber",
         },
         {
           to: "/",
-          title: "Overwatch"
+          title: "Reven",
         },
         {
           to: "/",
-          title: "Box Boy"
+          title: "Box Boy",
         },
         {
           to: "/",
-          title: "mystery app"
+          title: "mystery app",
         },
       ],
     };
@@ -88,7 +88,7 @@ const store = createStore({
           import.meta.url
         );
       }
-    }
+    },
   },
 });
 
