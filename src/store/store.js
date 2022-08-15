@@ -32,14 +32,45 @@ const store = createStore({
         {
           to: "/",
           title: "Overwatch"
+        }
+      ],
+      apps: [{
+          to: "/",
+          title: "Stranded"
+        },
+        {
+          to: "/",
+          title: "Space Cadet",
+        },
+        {
+          to: "/",
+          title: "Reboot"
+        },
+        {
+          to: "/",
+          title: "Delima"
+        },
+        {
+          to: "/",
+          title: "The Butch",
+        },
+        {
+          to: "/",
+          title: "Broken"
+        },
+        {
+          to: "/",
+          title: "Overwatch"
         },
         {
           to: "/",
           title: "Box Boy"
         },
+        {
+          to: "/",
+          title: "mystery app"
+        },
       ],
-      activemovie: null,
-      isOpen: false,
     };
   },
   getters: {},
@@ -50,6 +81,10 @@ const store = createStore({
         // images
         state.slides[i].img = new URL(
           `../assets/img/slides/img${i + 1}.jpg`,
+          import.meta.url
+        );
+        state.apps[i].img = new URL(
+          `../assets/img/apps/img${i + 1}.jpg`,
           import.meta.url
         );
       }

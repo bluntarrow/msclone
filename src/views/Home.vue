@@ -7,6 +7,7 @@
     <!--apps section -->
     <div class="p-8 pt-0 -mt-24 pb-0 z-40 relative">
       <CarouselSlides></CarouselSlides>
+      <ProductCards></ProductCards>
       <footer class="text-center text-xs md:mt-10 py-2 text-zinc-600">
         &copy;{{ year }} MsStore inc.
       </footer>
@@ -17,6 +18,7 @@
 <script setup>
 import ImageHeader from "../components/home/ImageHeader.vue";
 import CarouselSlides from "../components/home/CarouselSlides.vue";
+import ProductCards from "../components/home/ProductCards.vue";
 
 const date = new Date();
 const year = date.getFullYear();
