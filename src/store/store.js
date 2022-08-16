@@ -48,7 +48,7 @@ const store = createStore({
         },
         {
           to: "/",
-          title: "Space-X",
+          title: "Starlink",
         },
         {
           to: "/",
@@ -64,11 +64,11 @@ const store = createStore({
         },
         {
           to: "/",
-          title: "Box Boy",
+          title: "Tesla",
         },
         {
           to: "/",
-          title: "mystery app",
+          title: "X-code",
         },
       ],
     };
@@ -77,12 +77,15 @@ const store = createStore({
   mutations: {
     startup(state) {
       // slides mutations
+
+      // images
       for (let i = 0; i < state.slides.length; i++) {
-        // images
         state.slides[i].img = new URL(
           `../assets/img/slides/img${i + 1}.jpg`,
           import.meta.url
         );
+      }
+      for (let i = 0; i < state.apps.length; i++) {
         state.apps[i].img = new URL(
           `../assets/img/apps/img${i + 1}.jpg`,
           import.meta.url

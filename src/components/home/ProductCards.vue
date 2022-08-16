@@ -2,13 +2,14 @@
   <section class="mt-[5%]">
     <section>
       <div class="flex justify-between items-baseline">
-        <h1 class="text-xl">Top Free Apps</h1>
+        <h1 class="text-xl">Top free apps</h1>
         <div class="text-xs capitalize">see all</div>
       </div>
       <div class="grid grid-cols-3 gap-4 mt-4">
-        <div
+        <router-link
           class="rounded bg-zinc-900/50 hover:bg-zinc-900/75 p-2 hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
           v-for="i in 6"
+          :to="'/apps/' + (i - 1)"
         >
           <div class="flex w-full gap-6 justify-start">
             <img
@@ -26,18 +27,19 @@
             </ul>
             <div class="ml-auto text-sm capitalize">free</div>
           </div>
-        </div>
+        </router-link>
       </div>
     </section>
     <section class="mt-4">
       <div class="flex justify-between items-baseline">
-        <h1 class="text-xl">Top Paid Apps</h1>
+        <h1 class="text-xl">Top paid apps</h1>
         <div class="text-xs capitalize">see all</div>
       </div>
       <div class="grid grid-cols-6 gap-4 mt-4">
-        <div
+        <router-link
           class="rounded bg-zinc-900/50 hover:bg-zinc-900/75 p-2 hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
           v-for="i in 6"
+          :to="'/apps/' + (i - 1)"
         >
           <div class="flex flex-col w-full gap-6 justify-start">
             <img
@@ -55,7 +57,7 @@
             </ul>
             <div class="text-sm capitalize">free</div>
           </div>
-        </div>
+        </router-link>
       </div>
     </section>
   </section>

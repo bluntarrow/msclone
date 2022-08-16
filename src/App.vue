@@ -16,7 +16,7 @@ start();
     <Toolbar></Toolbar>
     <div class="flex w-full h-full text-zinc-50 pb-10 bg-zinc-900 overflow-hidden">
       <Leftnav></Leftnav>
-      <div class="bg-zinc-800 h-full rounded-tl basis-auto overflow-y-scroll">
+      <div :class="$route.name == 'app' ? 'bg-zinc-900':'bg-zinc-800'" class="h-full w-full rounded-tl basis-auto overflow-y-auto">
         <RouterView></RouterView>
       </div>
     </div>

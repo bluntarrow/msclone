@@ -3,7 +3,7 @@
     <!-- cards -->
     <swiper
       :slides-per-view="5"
-      :space-between="10"
+      :space-between="15"
       :loop="true"
       :autoplay="{
         delay: 5000,
@@ -18,7 +18,7 @@
       >
         <img
           v-lazy="slide.img"
-          class="bg-cover rounded-md object-cover aspect-[5/3]"
+          class="bg-cover rounded-md object-cover aspect-[2/1]"
           alt=""
         />
         <div

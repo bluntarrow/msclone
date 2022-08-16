@@ -18,7 +18,7 @@
       >
         <img
           v-lazy="slide.img"
-          class="bg-cover bg-fixed  object-cover aspect-[6/2]"
+          class="bg-cover bg-fixed  object-cover aspect-[8/3]"
           alt=""
         />
       </swiper-slide>
@@ -26,25 +26,25 @@
 
     <!-- writeup -->
     <div
-      class="h-full w-full z-50 absolute top-0 grid grid-cols-4 items-center pl-8 bg-gradient-to-r from-zinc-800 via-transparent to-transparent"
+      class="h-full w-full z-50 absolute top-0 grid grid-cols-4 items-center pl-8 bg-gradient-to-t from-zinc-800 via-transparent to-transparent "
     >
       <div class="flex flex-col col-span-3 md:col-span-1">
-        <div class="">
-          <div>free</div>
+        <div class="text-sm font-thin text-zinc-300/90 capitalize mb-2">
+          free
         </div>
-        <h1 class="text-4xl md:5xl">Balance</h1>
-        <article class="mt-3 font-semibold text-zinc-300/90">
+        <h1 class="text-4xl">Balance</h1>
+        <article class="mt-2 text-zinc-300/90">
           Crypto is the future, don't you think so?
         </article>
         <button
-          class="capitalize bg-zinc-500/50 rounded font-semibold w-max text-lg py-2 px-4 mt-2"
+          class="bg-gradient-to-r text-zinc-200 from-zinc-500/50 to-zinc-100/25 rounded w-max  py-1 px-6 mt-6"
         >
-          see details
+          See details
         </button>
       </div>
     </div>
     <div
-      class="h-full w-full absolute top-0 pl-8 bg-gradient-to-t pt-8 text-2xl font-bold from-zinc-800 via-transparent to-transparent z-50 text-zinc-300"
+      class="h-full w-full absolute top-0 pl-8 pt-8 text-2xl font-bold bg-gradient-to-r from-zinc-800 via-zinc-800/25  to-transparent z-40 text-zinc-100"
     >
       Home
     </div>
