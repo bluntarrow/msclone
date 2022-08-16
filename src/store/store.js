@@ -10,7 +10,7 @@ const store = createStore({
         },
         {
           to: "/",
-          title: "Space Cadet",
+          title: "Home Simulator",
         },
         {
           to: "/",
@@ -22,7 +22,7 @@ const store = createStore({
         },
         {
           to: "/",
-          title: "The Butch",
+          title: "Best Apps",
         },
         {
           to: "/",
@@ -30,7 +30,7 @@ const store = createStore({
         },
         {
           to: "/",
-          title: "Overwatch",
+          title: "Games",
         },
       ],
       apps: [

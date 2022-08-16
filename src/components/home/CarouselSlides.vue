@@ -1,65 +1,43 @@
 <template>
   <div>
-    <!-- header -->
-    <header class="flex justify-between items-baseline mt-6 mb-4">
-      <h1 class="font-semibold text-2xl">{{ title }}</h1>
-    </header>
-
     <!-- cards -->
     <swiper
       :slides-per-view="5"
       :space-between="10"
-    >
-      <!-- :autoplay="{
-        delay: 2500,
+      :loop="true"
+      :autoplay="{
+        delay: 5000,
         disableOnInteraction: false,
-      }" -->
+      }"
+      :modules='modules'
+    >
       <swiper-slide
-        class="bg-zinc-700/25 rounded-md shadow-sm relative"
+        class="rounded-md shadow-sm relative"
         v-for="slide in slides"
-        @click="setIsOpen(true)"
+        v-slot="{isActive}"
       >
         <img
           v-lazy="slide.img"
-          class="col-span-2 bg-cover rounded-md object-cover aspect-[5/3]"
+          class="bg-cover rounded-md object-cover aspect-[5/3]"
           alt=""
         />
-        <h1
-          class="text-zinc-100 text-center w-full font-bold cursor-default absolute top-3/4"
-          style="text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7)"
-        >
-          <!-- {{ slide.title }} -->
-        </h1>
+        <div
+          class="hover:text-zinc-100 hover:border-4 hover:border-sky-700 text-zinc-100/0 p-4 rounded-md hover:bg-gradient-to-r from-zinc-800 via-zinc-800/25 to-transparent w-full font-bold cursor-pointer absolute top-0 h-full flex items-center" :class="isActive?'bg-gradient-to-r from-zinc-800 via-zinc-800/25 to-transparent border-4 border-sky-700':''" :style="isActive?'color:rgb(244,244,245)':''">
+          {{ slide.title }}
+        </div>
       </swiper-slide>
     </swiper>
   </div>
 </template>
 <script setup>
-import { computed, ref } from "vue";
+import { computed} from "vue";
 import { useStore } from "vuex";
-// import { autoplay } from "swiper";
+import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
+const modules = [Autoplay]
 const store = useStore();
 let slides = computed(() => store.state.slides);
-const setIsOpen = (a) => {
-  store.commit("setIsOpen", a);
-};
-const titles = ["Only on Notflox", "Watch Again", "Thrillers & Horror"];
-//swiper
-const spv = ref();
-const screenwidth = screen.width;
-const calcspv = () => {
-  if (screenwidth < 640) {
-    spv.value = 3;
-  } else if (screenwidth > 1024) {
-    spv.value = 8;
-  } else if (screenwidth > 768) {
-    spv.value = 7;
-  } else if (screenwidth > 640) {
-    spv.value = 5;
-  }
-};
-calcspv();
+
 </script>

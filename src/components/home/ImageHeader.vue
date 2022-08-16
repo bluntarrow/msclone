@@ -1,13 +1,32 @@
 <template>
-  <div class="w-full">
+  <div class="w-full relative">
     <!--  picture -->
-    <div
-      class="bg-[url('./assets/img/slides/img1.jpg')] md:bg-left bg-cover w-full object-cover aspect-[20/10] md:aspect-[6/2] md:bg-fixed"
-    ></div>
+    
+     <swiper
+      :slides-per-view="1"
+      :space-between="10"
+      :autoplay="{
+        delay: 5000,
+        disableOnInteraction: false,
+      }"
+      :modules='modules'
+      class='relative'
+      effect="fade"
+    >
+      <swiper-slide
+        v-for="slide in slides"
+      >
+        <img
+          v-lazy="slide.img"
+          class="bg-cover bg-fixed  object-cover aspect-[6/2]"
+          alt=""
+        />
+      </swiper-slide>
+    </swiper>
 
     <!-- writeup -->
     <div
-      class="h-full w-full absolute top-0 grid grid-cols-4 items-center pl-8 bg-gradient-to-r from-zinc-800 via-transparent to-transparent"
+      class="h-full w-full z-50 absolute top-0 grid grid-cols-4 items-center pl-8 bg-gradient-to-r from-zinc-800 via-transparent to-transparent"
     >
       <div class="flex flex-col col-span-3 md:col-span-1">
         <div class="">
@@ -25,10 +44,22 @@
       </div>
     </div>
     <div
-      class="h-full w-full absolute top-0 pl-8 bg-gradient-to-t pt-8 text-2xl font-bold from-zinc-800 via-transparent to-transparent text-zinc-300"
+      class="h-full w-full absolute top-0 pl-8 bg-gradient-to-t pt-8 text-2xl font-bold from-zinc-800 via-transparent to-transparent z-50 text-zinc-300"
     >
       Home
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { computed} from "vue";
+import { useStore } from "vuex";
+import { Autoplay, EffectFade } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/effect-fade';
+
+const modules = [Autoplay, EffectFade]
+const store = useStore();
+let slides = computed(() => store.state.slides);
+
+</script>
