@@ -9,7 +9,9 @@
         {{ category }}
       </li>
     </ul>
-    <select class="p-1 bg-zinc-700/50 text-zinc-300 text-sm rounded outline-none">
+    <select
+      class="p-1 bg-zinc-700/50 text-zinc-300 text-sm rounded outline-none"
+    >
       <option value="">Sort by date</option>
     </select>
   </div>
@@ -18,12 +20,14 @@
   <section class="px-10">
     <div
       class="w-full bg-zinc-700/50 p-2 rounded grid grid-cols-4 items-center mb-4"
-      v-for="app in apps"
+      v-for="(app, i) in apps"
     >
       <div class="flex gap-2">
-        <img :src="app.img" class="aspect-square object-cover h-14" alt="" />
+        <router-link :to="'/apps/' + i">
+          <img :src="app.img" class="aspect-square object-cover h-14" alt="" />
+        </router-link>
         <div>
-          <span>{{ app.title }}</span> <br />
+          <router-link :to="'/apps/' + i">{{ app.title }}</router-link> <br />
           <span class="text-zinc-400 text-xs">{{ app.title }} inc.</span>
         </div>
       </div>
