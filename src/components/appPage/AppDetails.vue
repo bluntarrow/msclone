@@ -30,7 +30,6 @@
   <div class="bg-zinc-800 rounded">
     <div class="flex justify-between items-center px-4 pt-3 pb-2">
       <h3 class="font-semibold">Description</h3>
-      <ChevronRightIcon class="h-6"></ChevronRightIcon>
     </div>
     <hr class="border-zinc-500/50" />
     <div class="font-thin p-4 pr-6">
@@ -79,7 +78,6 @@
   <div class="bg-zinc-800 rounded">
     <div class="flex justify-between items-center px-4 pt-3 pb-2">
       <h3 class="font-semibold">Features</h3>
-      <ChevronRightIcon class="h-6"></ChevronRightIcon>
     </div>
     <hr class="border-zinc-500/50" />
     <div class="font-thin p-4 pr-6">
@@ -105,7 +103,6 @@
   <div class="bg-zinc-800 rounded">
     <div class="flex justify-between items-center px-4 pt-3 pb-2">
       <h3 class="font-semibold">What's new in this version</h3>
-      <ChevronRightIcon class="h-6"></ChevronRightIcon>
     </div>
     <hr class="border-zinc-500/50" />
     <div class="font-thin p-4 pr-6">
@@ -155,8 +152,8 @@
 <!-- suggested apps -->
   <section class="mt-4 pb-3">
       <div class="flex justify-between items-baseline">
-        <h1 class="text-xl">Top paid apps</h1>
-        <div class="text-xs capitalize">see all</div>
+        <h1 class="text-xl">People also view</h1>
+        <div class="text-xs capitalize text-blue-400/75 underline">see all</div>
       </div>
       <div class="grid grid-cols-4 gap-4 mt-4">
         <router-link

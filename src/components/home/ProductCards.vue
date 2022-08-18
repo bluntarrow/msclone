@@ -3,7 +3,7 @@
     <section>
       <div class="flex justify-between items-baseline">
         <h1 class="text-xl">Top free apps</h1>
-        <div class="text-xs capitalize">see all</div>
+        <div class="text-xs capitalize text-blue-400/75 underline">see all</div>
       </div>
       <div class="grid grid-cols-3 gap-4 mt-4">
         <router-link
@@ -33,7 +33,7 @@
     <section class="mt-4">
       <div class="flex justify-between items-baseline">
         <h1 class="text-xl">Top paid apps</h1>
-        <div class="text-xs capitalize">see all</div>
+        <div class="text-xs capitalize text-blue-400/75 underline">see all</div>
       </div>
       <div class="grid grid-cols-6 gap-4 mt-4">
         <router-link
